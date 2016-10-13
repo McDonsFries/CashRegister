@@ -60,7 +60,7 @@ namespace CashRegister
             
             change = tendered - priceWithTax;
             
-             changeLabel.Text = change.ToString("C");
+            changeLabel.Text = change.ToString("C");
 
         }
 
@@ -72,15 +72,16 @@ namespace CashRegister
 
             Font receiptFont = new Font("Courier New", 8); 
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
-            formGraphics.DrawString("Burgers ordered - " + burger, receiptFont,receiptBrush,200, 50);
-            formGraphics.DrawString("Fries ordered   - " + fries, receiptFont, receiptBrush, 200, 70);
-            formGraphics.DrawString("Drinks ordered - " + drink, receiptFont, receiptBrush, 200, 90); ;
-            formGraphics.DrawString("Your total comes to " + price.ToString("$0.00"), receiptFont, receiptBrush, 200, 110); ;
-            formGraphics.DrawString("Tax - " + tax.ToString("$0.00"), receiptFont, receiptBrush, 200, 130);
-            formGraphics.DrawString("Your total with tax - " + priceWithTax.ToString("$0.00"), receiptFont, receiptBrush, 200, 150);
-            formGraphics.DrawString("Amount tendered - " + tendered.ToString("$0.00"), receiptFont, receiptBrush, 200, 170);
-            formGraphics.DrawString("Change - " + change.ToString("$0.00"), receiptFont, receiptBrush, 200, 190);
-
+            formGraphics.DrawString("Burgers n Stuff ", receiptFont, receiptBrush, 260, 20);
+            formGraphics.DrawString("Burgers ordered;       " + burger, receiptFont,receiptBrush,205, 50);
+            formGraphics.DrawString("Fries ordered;         " + fries, receiptFont, receiptBrush, 205, 80);
+            formGraphics.DrawString("Drinks ordered;        " + drink, receiptFont, receiptBrush, 205, 110); ;
+            formGraphics.DrawString("Your total comes to;   " + price.ToString("$0.00"), receiptFont, receiptBrush, 205, 140); ;
+            formGraphics.DrawString("Tax;                   " + tax.ToString("$0.00"), receiptFont, receiptBrush, 205, 170);
+            formGraphics.DrawString("Your total with tax;   " + priceWithTax.ToString("$0.00"), receiptFont, receiptBrush, 205, 200);
+            formGraphics.DrawString("Amount tendered;       " + tendered.ToString("$0.00"), receiptFont, receiptBrush, 205, 230);
+            formGraphics.DrawString("Change;                " + change.ToString("$0.00"), receiptFont, receiptBrush, 205, 260);
+            formGraphics.DrawString("Thank you, have a nice day!", receiptFont, receiptBrush, 220, 300);
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace CashRegister
             Graphics formGraphics = this.CreateGraphics(); //This gets rid of the receipt
             SolidBrush taxBrush = new SolidBrush(Color.PowderBlue);
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
+
             burgerBox.Clear();
             friesBox.Clear();
             drinksBox.Clear();
@@ -97,6 +99,7 @@ namespace CashRegister
             taxLabel.Text = "";
             totalLabel.Text = "";
             changeLabel.Text = "";
+
         }
 
     }
