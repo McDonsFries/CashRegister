@@ -49,7 +49,7 @@ namespace CashRegister
 
             taxLabel.Text = tax.ToString("C");
 
-            totalLabel.Text = priceWithTax.ToString("C");
+            totalLabel.Text = priceWithTax.ToString("C"); 
 
         }
 
