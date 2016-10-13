@@ -59,8 +59,8 @@ namespace CashRegister
             tendered = Convert.ToInt32(tenderedInput.Text); //The change is being made if need be
             
             change = tendered - priceWithTax;
-
-            changeLabel.Text = change.ToString("C");
+            
+             changeLabel.Text = change.ToString("C");
 
         }
 
@@ -88,12 +88,16 @@ namespace CashRegister
             Graphics formGraphics = this.CreateGraphics(); //This gets rid of the receipt
             SolidBrush taxBrush = new SolidBrush(Color.PowderBlue);
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
+            burgerBox.Clear();
+            friesBox.Clear();
+            drinksBox.Clear();
+            tenderedInput.Clear();
 
+            subtotalLabel.Text = "";
+            taxLabel.Text = "";
+            totalLabel.Text = "";
+            changeLabel.Text = "";
         }
 
-      //  private void cashRegister_Load(object sender, EventArgs e)
-       // {
-
-       // }
     }
 }
