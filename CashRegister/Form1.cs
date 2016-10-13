@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace CashRegister
 {
@@ -55,9 +56,10 @@ namespace CashRegister
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer player = new SoundPlayer(Properties.Resources.cashmoney);
+            player.Play();
 
             tendered = Convert.ToInt32(tenderedInput.Text); //The change is being made if need be
-            
             change = tendered - priceWithTax;
             
             changeLabel.Text = change.ToString("C");
@@ -72,6 +74,8 @@ namespace CashRegister
 
             Font receiptFont = new Font("Courier New", 8); 
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
+            SoundPlayer player  = new SoundPlayer(Properties.Resources.cashmoney);
+            player.Play();
             formGraphics.DrawString("Burgers n Stuff ", receiptFont, receiptBrush, 260, 20);
             formGraphics.DrawString("Burgers ordered;       " + burger, receiptFont,receiptBrush,205, 50);
             formGraphics.DrawString("Fries ordered;         " + fries, receiptFont, receiptBrush, 205, 80);
@@ -82,6 +86,7 @@ namespace CashRegister
             formGraphics.DrawString("Amount tendered;       " + tendered.ToString("$0.00"), receiptFont, receiptBrush, 205, 230);
             formGraphics.DrawString("Change;                " + change.ToString("$0.00"), receiptFont, receiptBrush, 205, 260);
             formGraphics.DrawString("Thank you, have a nice day!", receiptFont, receiptBrush, 220, 300);
+
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
