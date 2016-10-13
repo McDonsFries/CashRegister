@@ -70,7 +70,7 @@ namespace CashRegister
             SolidBrush taxBrush = new SolidBrush(Color.White);
             SolidBrush receiptBrush = new SolidBrush(Color.Black);
 
-            Font receiptFont = new Font("Courier New", 8);
+            Font receiptFont = new Font("Courier New", 8); 
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
             formGraphics.DrawString("Burgers ordered - " + burger, receiptFont,receiptBrush,200, 50);
             formGraphics.DrawString("Fries ordered   - " + fries, receiptFont, receiptBrush, 200, 70);
