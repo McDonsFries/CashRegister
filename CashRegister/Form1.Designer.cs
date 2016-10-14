@@ -63,6 +63,7 @@
             this.receiptLabel6 = new System.Windows.Forms.Label();
             this.receiptLabel7 = new System.Windows.Forms.Label();
             this.receiptLabel8 = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -372,12 +373,21 @@
             this.receiptLabel8.Size = new System.Drawing.Size(0, 13);
             this.receiptLabel8.TabIndex = 34;
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(28, 261);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 13);
+            this.errorLabel.TabIndex = 35;
+            // 
             // cashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(427, 382);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.receiptLabel8);
             this.Controls.Add(this.receiptLabel7);
             this.Controls.Add(this.receiptLabel6);
@@ -456,6 +466,7 @@
         private System.Windows.Forms.Label receiptLabel6;
         private System.Windows.Forms.Label receiptLabel7;
         private System.Windows.Forms.Label receiptLabel8;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
 

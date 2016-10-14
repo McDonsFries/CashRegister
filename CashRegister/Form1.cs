@@ -35,7 +35,7 @@ namespace CashRegister
 
         private void totalButton_Click(object sender, EventArgs e)
         {
-
+            try { 
             burger = Convert.ToInt32(burgerBox.Text); //Your order is taken and the total is printed
             fries = Convert.ToInt32(friesBox.Text);
             drink = Convert.ToInt32(drinksBox.Text);
@@ -50,20 +50,31 @@ namespace CashRegister
 
             taxLabel.Text = tax.ToString("C");
 
-            totalLabel.Text = priceWithTax.ToString("C"); 
-
+            totalLabel.Text = priceWithTax.ToString("C");
+            }
+            catch
+            {
+            errorLabel.Text = "Your input must be numbers only";
+            }
         }
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            try
+            {
             SoundPlayer player = new SoundPlayer(Properties.Resources.cashmoney);
             player.Play();
 
             tendered = Convert.ToInt32(tenderedInput.Text); //The change is being made if need be
             change = tendered - priceWithTax;
-            
-            changeLabel.Text = change.ToString("C");
 
+            changeLabel.Text = change.ToString("C");
+            }
+            catch
+            {
+            errorLabel.Text = "Your input must be numbers only";
+            }
+            errorLabel.Text = "";
         }
 
         private void receiptButton_Click(object sender, EventArgs e)
@@ -86,6 +97,7 @@ namespace CashRegister
             formGraphics.DrawString("Amount tendered;       " + tendered.ToString("$0.00"), receiptFont, receiptBrush, 205, 230);
             formGraphics.DrawString("Change;                " + change.ToString("$0.00"), receiptFont, receiptBrush, 205, 260);
             formGraphics.DrawString("Thank you, have a nice day!", receiptFont, receiptBrush, 220, 300);
+            errorLabel.Text = "";
 
         }
 
@@ -104,6 +116,7 @@ namespace CashRegister
             taxLabel.Text = "";
             totalLabel.Text = "";
             changeLabel.Text = "";
+            errorLabel.Text = "";
 
         }
 
