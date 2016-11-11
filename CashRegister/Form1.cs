@@ -119,7 +119,7 @@ namespace CashRegister
             tendered = 0;
             burger = 0;
             fries = 0;
-            drink = 0;
+            drink = 0; 
 
             subtotalLabel.Text = "";
             taxLabel.Text = "";
