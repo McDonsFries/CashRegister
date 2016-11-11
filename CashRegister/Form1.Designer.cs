@@ -76,7 +76,7 @@
             // 
             // totalButton
             // 
-            this.totalButton.BackColor = System.Drawing.Color.Blue;
+            this.totalButton.BackColor = System.Drawing.Color.Lavender;
             this.totalButton.Location = new System.Drawing.Point(34, 138);
             this.totalButton.Name = "totalButton";
             this.totalButton.Size = new System.Drawing.Size(123, 34);
@@ -87,7 +87,7 @@
             // 
             // changeButton
             // 
-            this.changeButton.BackColor = System.Drawing.Color.Blue;
+            this.changeButton.BackColor = System.Drawing.Color.Lavender;
             this.changeButton.Location = new System.Drawing.Point(13, 340);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(120, 41);
@@ -98,7 +98,7 @@
             // 
             // receiptButton
             // 
-            this.receiptButton.BackColor = System.Drawing.Color.Blue;
+            this.receiptButton.BackColor = System.Drawing.Color.Lavender;
             this.receiptButton.Location = new System.Drawing.Point(191, 347);
             this.receiptButton.Name = "receiptButton";
             this.receiptButton.Size = new System.Drawing.Size(117, 34);
@@ -109,7 +109,7 @@
             // 
             // neworderButton
             // 
-            this.neworderButton.BackColor = System.Drawing.Color.Blue;
+            this.neworderButton.BackColor = System.Drawing.Color.Lavender;
             this.neworderButton.Location = new System.Drawing.Point(314, 345);
             this.neworderButton.Name = "neworderButton";
             this.neworderButton.Size = new System.Drawing.Size(110, 36);
@@ -228,7 +228,7 @@
             // subtotalLabel
             // 
             this.subtotalLabel.AutoSize = true;
-            this.subtotalLabel.Location = new System.Drawing.Point(128, 188);
+            this.subtotalLabel.Location = new System.Drawing.Point(124, 188);
             this.subtotalLabel.Name = "subtotalLabel";
             this.subtotalLabel.Size = new System.Drawing.Size(0, 13);
             this.subtotalLabel.TabIndex = 18;
@@ -236,7 +236,7 @@
             // taxLabel
             // 
             this.taxLabel.AutoSize = true;
-            this.taxLabel.Location = new System.Drawing.Point(129, 217);
+            this.taxLabel.Location = new System.Drawing.Point(123, 213);
             this.taxLabel.Name = "taxLabel";
             this.taxLabel.Size = new System.Drawing.Size(0, 13);
             this.taxLabel.TabIndex = 19;
@@ -244,7 +244,7 @@
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(126, 239);
+            this.totalLabel.Location = new System.Drawing.Point(122, 241);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(0, 13);
             this.totalLabel.TabIndex = 20;
@@ -269,7 +269,7 @@
             // changeLabel
             // 
             this.changeLabel.AutoSize = true;
-            this.changeLabel.Location = new System.Drawing.Point(112, 308);
+            this.changeLabel.Location = new System.Drawing.Point(122, 311);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(0, 13);
             this.changeLabel.TabIndex = 23;
@@ -385,7 +385,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(427, 382);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.receiptLabel8);

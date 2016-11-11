@@ -35,26 +35,27 @@ namespace CashRegister
 
         private void totalButton_Click(object sender, EventArgs e)
         {
-            try { 
-            burger = Convert.ToInt32(burgerBox.Text); //Your order is taken and the total is printed
-            fries = Convert.ToInt32(friesBox.Text);
-            drink = Convert.ToInt32(drinksBox.Text);
+            try
+            {
+                burger = Convert.ToInt32(burgerBox.Text); //Your order is taken and the total is printed
+                fries = Convert.ToInt32(friesBox.Text);
+                drink = Convert.ToInt32(drinksBox.Text);
 
-            price = burger + fries + drink;
+                price = burger + fries + drink;
 
-            subtotalLabel.Text = price.ToString("$0.00");
+                subtotalLabel.Text = price.ToString("$0.00");
 
-            tax = price * TAX_RATE;
+                tax = price * TAX_RATE;
 
-            priceWithTax = price + tax;
+                priceWithTax = price + tax;
 
-            taxLabel.Text = tax.ToString("C");
+                taxLabel.Text = tax.ToString("C");
 
-            totalLabel.Text = priceWithTax.ToString("C");
+                totalLabel.Text = priceWithTax.ToString("C");
             }
             catch
             {
-            errorLabel.Text = "Your input must be numbers only";
+                errorLabel.Text = "Your input must have numbers only";
             }
         }
 
@@ -62,17 +63,17 @@ namespace CashRegister
         {
             try
             {
-            SoundPlayer player = new SoundPlayer(Properties.Resources.cashmoney);
-            player.Play();
+                SoundPlayer player = new SoundPlayer(Properties.Resources.cashmoney);
+                player.Play();
 
-            tendered = Convert.ToInt32(tenderedInput.Text); //The change is being made if need be
-            change = tendered - priceWithTax;
+                tendered = Convert.ToInt32(tenderedInput.Text); //The change is being made if need be
+                change = tendered - priceWithTax;
 
-            changeLabel.Text = change.ToString("C");
+                changeLabel.Text = change.ToString("C");
             }
             catch
             {
-            errorLabel.Text = "Your input must be numbers only";
+                errorLabel.Text = "Your input must have numbers only";
             }
             errorLabel.Text = "";
         }
@@ -83,12 +84,12 @@ namespace CashRegister
             SolidBrush taxBrush = new SolidBrush(Color.White);
             SolidBrush receiptBrush = new SolidBrush(Color.Black);
 
-            Font receiptFont = new Font("Courier New", 8); 
+            Font receiptFont = new Font("Courier New", 8);
             formGraphics.FillRectangle(taxBrush, 200, 0, 340, 340);
-            SoundPlayer player  = new SoundPlayer(Properties.Resources.cashmoney);
+            SoundPlayer player = new SoundPlayer(Properties.Resources.cashmoney);
             player.Play();
             formGraphics.DrawString("Burgers n Stuff ", receiptFont, receiptBrush, 260, 20);
-            formGraphics.DrawString("Burgers ordered;       " + burger, receiptFont,receiptBrush,205, 50);
+            formGraphics.DrawString("Burgers ordered;       " + burger, receiptFont, receiptBrush, 205, 50);
             formGraphics.DrawString("Fries ordered;         " + fries, receiptFont, receiptBrush, 205, 80);
             formGraphics.DrawString("Drinks ordered;        " + drink, receiptFont, receiptBrush, 205, 110); ;
             formGraphics.DrawString("Your total comes to;   " + price.ToString("$0.00"), receiptFont, receiptBrush, 205, 140); ;
@@ -111,6 +112,14 @@ namespace CashRegister
             friesBox.Clear();
             drinksBox.Clear();
             tenderedInput.Clear();
+            change = 0;
+            tax = 0;
+            price = 0;
+            priceWithTax = 0;
+            tendered = 0;
+            burger = 0;
+            fries = 0;
+            drink = 0;
 
             subtotalLabel.Text = "";
             taxLabel.Text = "";
